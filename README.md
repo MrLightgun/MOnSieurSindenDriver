@@ -68,16 +68,16 @@ There are multiple steps for getting lightguns to work in MiSTer, if you find th
 Go to scripts on the MiSTer main menu, select "LightgunStart-Default" click a button on your gamepad after it has started up.
 
 Or on the console you can manually do:
-/media/fat/Lightgun/./LightgunDriver joystick
+cd /home/alarm/Lightgun/
+./LightgunDriver joystick
 
 or (medium resource)
-/media/fat/Lightgun/./LightgunDriver joystick mediumresource
+cd /home/alarm/Lightgun/
+./LightgunDriver joystick mediumresource
 
 or (low resource)
-/media/fat/Lightgun/./LightgunDriver joystick lowresource
-
-(On MOnSieur it would be /home/alarm/Lightgun/./LightgunDriver joystick )
-Check all the startup messages that there is no errors.
+cd /home/alarm/Lightgun/
+./LightgunDriver joystick lowresource
 
 2) Setup lightgun as a MiSTer menu device, this enables the cores to see it.
 Scroll through MiSTer settings, go backwards on joypad to System Settings -> Define joystick buttons
