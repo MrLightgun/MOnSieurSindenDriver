@@ -1,5 +1,5 @@
 # MiSTerSindenDriver
-A repo to for all the files needed to get Sinden Lightgun to work on MiSTer
+A repo to for all the files needed to get Sinden Lightgun to work on MiSTer using MOnSieurFPGA.
 
 The Sinden Lightgun is a lightgun controller compatible with modern LCD displays. Unlike other lightguns, the Sinden Lightgun works by processing the data from a video camera onboard the gun. This allows it to work without needing to attach any external IR emitters or other devices to your display. However, processing the camera data into a gun tracking position requires specialized software and a good amount of processing power.
 
@@ -40,35 +40,25 @@ Disconnect
 Recommend using a fresh SD card, the installation should improve over time but at the moment
 it has been proven to work on these 2 builds:
 
-Install MiSTer using MrFusion 2.7 
-https://github.com/MiSTer-devel/mr-fusion
-Use this version:
-https://github.com/MiSTer-devel/mr-fusion/releases/tag/v2.7
-
-or use MOnSieurFPGA Feb 2022 release
+Use MOnSieurFPGA Feb 2022 release:
 https://github.com/MOnSieurFPGA/MOnSieurFPGA-SD_Image_Builds
 
-I am going to assume user has set up a MiSTer before and can get MiSTer working, if you haven't done this, I recommend using MrFusion and following some guides and just getting a general idea how everything works before following this guide.
+I am going to assume user has set up a MiSTer before and can get MiSTer working.
 
 Your MiSTer needs to be connected to the internet, with ethernet it is the simplest way.
 
-If using MrFusion, Go to Scripts on the main menu and do "Update".  This will add all the cores you need for non-lightgun gaming and includes the folders to put your roms.
-
 Find out your MiSTer IP address and note it down.
 
-Connect to MiSTer device over ssh (I like to use putty), or you can load console on the device which I believe is F9 (you need a kb). Username/Pass is root/1 on MiSTer mainline and alarm/alarm on MOnSieur.  You can either copy the files over or can manually paste the commands.
+Connect to MiSTer device over ssh (I like to use putty), or you can load console on the device which I believe is F9 (you need a kb). Username/Pass is alarm/alarm on MOnSieur.  You can either copy the files over or can manually paste the commands.
 
 Before running, you need to kill the MiSTer service.  I recommend hitting F9 to exit MiSTer to the console, if you run "top" you will see the running applications.  Make a note of the process id for MiSTer, then exit top with ctrl-c.  Then run "sudo kill xxxx" where xxxx is the process id.  Run this just before you run the Install scripts.
-
-If installing MiSTer using MrFusion 2.7:
-Run the Install_MrFusion.sh script from this github.
 
 If installing using MOnSieurFPGA Feb 2022 release
 Run the Install_MOnSieur.sh script from this github.
 
 You can manually type it, or you can copy it onto MiSTer with ftp.  You need to run:
 "chmod +x *.sh"
-On the script so that the system can run it, and then run it like this "./Install_MrFusion.sh" or "./Install_MOnSieur.sh"
+On the script so that the system can run it, and then run it like this "./Install_MOnSieur.sh"
 
 Reboot MiSTer after it has been successfully run.
 
@@ -174,7 +164,7 @@ Other cores, maybe some of the computer cores, hopefully a future 3DO core would
 
 This project to add Sinden Lightgun support owes a huge debt of gratitude to Nolan Nicholson who assisted with the development and setup and Wiggy from the Sinden Lightgun Discord who help push to make it happen and assisted with the scripts and testing.
 
-I've really tidied up the MrFusion version of this guide on 27th June 2024, need to do the same to the MOnSieur guide, so there may be issues with that.
+
  
 
 
